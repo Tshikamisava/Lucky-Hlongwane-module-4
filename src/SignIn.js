@@ -5,29 +5,27 @@ import { View, Dimensions, Text, StyleSheet, SafeAreaView, TextInput, TouchableO
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
 
-const Login = ({ navigation }) => {
+const SignIn = ({ navigation }) => {
     return (
         <SafeAreaView style={styles.container}>
-            <Text style={{fontWeight: '100', fontSize: 34, marginTop: 50}}>Welcome to TShikamisava Group of Campanies</Text>
-            <Text style={{ marginBottom: 10, fontSize: 18}}>Login to continue</Text>
+            <Text style={{fontWeight: '100', fontSize: 34, marginTop: 50}}>Welcome </Text>
+            <Text style={{ marginBottom: 10, fontSize: 18}}>SignIn to continue</Text>
             <View style={styles.form}>
+            <TextInput style={styles.input}
+            placeholder="Name"
+            />
             <TextInput style={styles.input}
             placeholder="Email"
             />
-            <TextInput style={styles.input}
+               <TextInput style={styles.input}
             placeholder="Password"
             />
-
-<TouchableOpacity style={styles.button}
-            onPress={()=> navigation.navigate('SignIn')}>
-
-                <Text style={{color:'white'}}>SignUP</Text>
-            </TouchableOpacity>
             </View>
+            
             <TouchableOpacity style={styles.button}
             onPress={()=> navigation.navigate('Home')}>
 
-                <Text style={{color:'white'}}>Login</Text>
+                <Text style={{color:'white'}}>SignIn</Text>
             </TouchableOpacity>
             
         </SafeAreaView>
@@ -61,4 +59,4 @@ const styles = StyleSheet.create({
 
 });
 
-export default Login;
+export default SignIn;
